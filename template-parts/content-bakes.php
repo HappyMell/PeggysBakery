@@ -4,6 +4,6 @@
 
     <div class="generic-content">
     <?php the_excerpt();?> 
-    <p><a class="btn btn--blue" href="<?php the_permalink();?>">View campus</a></p> 
+    <p><a class="btn btn--blue" href="<?php the_permalink();?>">View sweet treats</a></p> 
     </div>
     
