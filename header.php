@@ -18,8 +18,8 @@
             <ul>
             <li class="float-left"<?php if(get_post_type() == 'bakes') echo 'class="current-menu-item"'?>><a href="<?php echo site_url('/bakes')?>">Bakes</a></li>
             <li class="float-left"<?php if(is_page('about-us') | wp_get_post_parent_id(0) == 11) echo 'class="current-menu-item"'?>><a href="<?php echo site_url('/about-us')?>">About Us</a></li>
-                <li class="float-right" <?php if(get_post_type() == 'locations') echo 'class="current-menu-item"'?>><a href="<?php echo get_post_type_archive_link('locations')?>">Locations</a></li>
-            <li  class="float-right" <?php if(get_post_type() == 'sales' | is_page('past-sales')) echo 'class="current-menu-item"' ?>><a href="<?php echo get_post_type_archive_link('sales') ?>">Sales</a></li>
+            <li class="float-right" <?php if(get_post_type() == 'locations') echo 'class="current-menu-item"'?>><a href="<?php echo get_post_type_archive_link('locations')?>">Locations</a></li>
+            <li class="float-right" <?php if(get_post_type() == 'sales' | is_page('past-sales')) echo 'class="current-menu-item"' ?>><a href="<?php echo get_post_type_archive_link('sales') ?>">Sales</a></li>
         
           </ul> 
         </nav>

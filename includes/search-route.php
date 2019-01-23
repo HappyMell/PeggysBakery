@@ -1,32 +1,32 @@
 <?php
 
-add_action('rest_api_init', 'universityRegisterSearch');
+add_action('rest_api_init', 'bakeryRegisterSearch');
 
-function universityRegisterSearch() {
-  register_rest_route('university/v1', 'search', array(
+function bakeryRegisterSearch() {
+  register_rest_route('bakery/v2', 'search', array(
     'methods' => WP_REST_SERVER::READABLE,
-    'callback' => 'universitySearchResults'
+    'callback' => 'bakerySearchResults'
   ));
 }
 
-function universitySearchResults($data) {
+function bakerySearchResults($data) {
   $mainQuery = new WP_Query(array(
-    'post_type' => array('post', 'page', 'professor', 'program', 'campus', 'event'),
+    'post_type' => array('post', 'page', 'bakes', 'location', 'sales', 'news'),
     's' => sanitize_text_field($data['term'])
   ));
 
   $results = array(
     'generalInfo' => array(),
-    'professors' => array(),
-    'programs' => array(),
-    'events' => array(),
-    'campuses' => array()
+    'bakes' => array(),
+    'locations' => array(),
+    'sales' => array(),
+    'news' => array()
   );
 
   while($mainQuery->have_posts()) {
     $mainQuery->the_post();
 
-    if (get_post_type() == 'post' OR get_post_type() == 'page') {
+    if (get_post_type() == 'post' || get_post_type() == 'page') {
       array_push($results['generalInfo'], array(
         'title' => get_the_title(),
         'permalink' => get_the_permalink(),
@@ -35,42 +35,24 @@ function universitySearchResults($data) {
       ));
     }
 
-    if (get_post_type() == 'professor') {
-      array_push($results['professors'], array(
-        'title' => get_the_title(),
-        'permalink' => get_the_permalink(),
-        'image' => get_the_post_thumbnail_url(0, 'professorLandscape')
-      ));
-    }
-
-    if (get_post_type() == 'program') {
-      $relatedCampuses = get_field('related_campus');
-
-      if ($relatedCampuses) {
-        foreach($relatedCampuses as $campus) {
-          array_push($results['campuses'], array(
-            'title' => get_the_title($campus),
-            'permalink' => get_the_permalink($campus)
-          ));
-        }
-      }
-    
-      array_push($results['programs'], array(
-        'title' => get_the_title(),
-        'permalink' => get_the_permalink(),
-        'id' => get_the_id()
-      ));
-    }
-
-    if (get_post_type() == 'campus') {
-      array_push($results['campuses'], array(
+    if (get_post_type() == 'bakes') {
+      array_push($results['bakes'], array(
         'title' => get_the_title(),
         'permalink' => get_the_permalink()
       ));
     }
 
-    if (get_post_type() == 'event') {
-      $eventDate = new DateTime(get_field('event_date'));
+    
+
+    if (get_post_type() == 'locations') {
+      array_push($results['locations'], array(
+        'title' => get_the_title(),
+        'permalink' => get_the_permalink()
+      ));
+    }
+
+    if (get_post_type() == 'news') {
+      $eventDate = new DateTime(get_field('news'));
       $description = null;
       if (has_excerpt()) {
         $description = get_the_excerpt();
@@ -78,7 +60,7 @@ function universitySearchResults($data) {
         $description = wp_trim_words(get_the_content(), 18);
       }
 
-      array_push($results['events'], array(
+      array_push($results['news'], array(
         'title' => get_the_title(),
         'permalink' => get_the_permalink(),
         'month' => $eventDate->format('M'),
@@ -136,8 +118,8 @@ function universitySearchResults($data) {
 
     }
 
-    $results['professors'] = array_values(array_unique($results['professors'], SORT_REGULAR));
-    $results['events'] = array_values(array_unique($results['events'], SORT_REGULAR));
+    $results['locations'] = array_values(array_unique($results['locations'], SORT_REGULAR));
+    $results['news'] = array_values(array_unique($results['events'], SORT_REGULAR));
   }
 
 

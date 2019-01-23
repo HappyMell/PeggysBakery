@@ -22,11 +22,11 @@
   }
 
   &--orange {
-    background-color: $lightOrange;
+    background-color: $lightPink;
   }
 
   &--orange:hover {
-    background: linear-gradient($lightOrange, color($lightOrange b(+30%) s(+80%)));
+    background: linear-gradient($lightPink, color($lightPink b(+30%) s(+80%)));
   }
 
   &--dark-orange {

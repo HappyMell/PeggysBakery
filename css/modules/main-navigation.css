@@ -32,8 +32,7 @@
 }
 
 .main-navigation a {
-  display: block;
-  padding: 10px 20px;
+  display: inline-block;
   color: #FFF;
   text-decoration: none;
   font-weight: 300;
@@ -45,5 +44,5 @@
 
 .main-navigation .current-menu-item a,
 .main-navigation a:hover {
-  color: $beige;
+  color: #FAF0CA;
 }

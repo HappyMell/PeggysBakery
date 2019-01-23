@@ -18,9 +18,10 @@
 
 body {
   color: #333;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lobster', cursive;
   overflow-x: hidden;
   position: relative;
+  font-size: x-large;
 }
 
 img {

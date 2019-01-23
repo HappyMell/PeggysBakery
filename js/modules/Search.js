@@ -64,7 +64,7 @@ class Search {
     }
 
     getResults() {
-        $.getJSON(bakeryData.root_url + '/wp-json/wp/v2/posts?search?term=' + this.searchField.val(), (results) => {
+        $.getJSON(bakeryData.root_url + '/wp-json/bakery/v2/search?term=' + this.searchField.val(), (results) => {
             this.resultsDiv.html(`
 <div class="row">
     <div class="one-third">
@@ -75,21 +75,21 @@ class Search {
     </div>
     <div class="one-third">
         <h2 class="search-overlay__section-title">Bakes</h2>
-            ${results.programs.length ? '<ul class="link-list min-list">' : `<p>No programs match that search. <a href="${bakeryData.root_url}/bakes">View all sweet treats</a></p>`}
-        ${results.programs.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
-        ${results.programs.length ? '</ul>' : ''}  
+            ${results.bakes.length ? '<ul class="link-list min-list">' : `<p>No programs match that search. <a href="${bakeryData.root_url}/bakes">View all sweet treats</a></p>`}
+        ${results.bakes.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
+        ${results.bakes.length ? '</ul>' : ''}  
         
     </div>
 
     <div class="one-third">
         <h2 class="search-overlay__section-title">Locations</h2>
-            ${results.campuses.length ? '<ul class="link-list min-list">' : `<p>No locations match that search. <a href="${bakeryData.root_url}/locations">View all locations</a></p></p>`}
-        ${results.campuses.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
-        ${results.campuses.length ? '</ul>' : ''}  
+            ${results.locations.length ? '<ul class="link-list min-list">' : `<p>No locations match that search. <a href="${bakeryData.root_url}/locations">View all locations</a></p></p>`}
+        ${results.locations.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
+        ${results.locations.length ? '</ul>' : ''}  
 
-        <h2 class="search-overlay__section-title">Events</h2>
-            ${results.events.length ? '' : `<p>No events match that search. <a href="${bakeryData.root_url}/events">View all events</a></p></p>`}
-        ${results.events.map(item => `
+        <h2 class="search-overlay__section-title">Sales</h2>
+            ${results.sales.length ? '' : `<p>No sales match that search. <a href="${bakeryData.root_url}/sales">View all sales</a></p></p>`}
+        ${results.sales.map(item => `
         <div class="event-summary">
         <a class="event-summary__date t-center" href="${item.permalink}">
             <span class="event-summary__month">

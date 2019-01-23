@@ -1,5 +1,5 @@
 /*
-Theme Name: Fictional University
+Theme Name: Peggy's Bakery
 Author: Mellisa Madrid
 Version: 1.0
 */
@@ -15,7 +15,6 @@ Version: 1.0
 
 /* BEM Blocks */
 @import "modules/shame";
-@import "modules/login";
 @import "modules/btn";
 @import "modules/site-header";
 @import "modules/site-footer";

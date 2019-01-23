@@ -37,8 +37,9 @@
   position: relative;
   z-index: 20;
   margin: 0;
-  font-size: 1.75rem;
+  font-size: 2.75rem;
   font-weight: 100;
+  text-align: center;
 }
 
 .school-logo-text strong {

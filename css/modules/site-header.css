@@ -4,6 +4,7 @@
   left: 0;
   right: 0;
   padding: 20px 0;
+  background-color:  #FFAEC3;
 
   &__avatar {
     top: 0;
