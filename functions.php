@@ -1,13 +1,12 @@
 <?php
 
 // Pulling in JS from includes folder
-require get_theme_file_path('/includes/like-route.php');
 require get_theme_file_path('/includes/search-route.php');
 
-// Custom rest
-add_action('rest_api_init', 'university_custom_rest');
+// Custom rest API (search)
+add_action('rest_api_init', 'bakery_custom_rest');
 
-function university_custom_rest() {
+function bakery_custom_rest() {
     register_rest_field('post', 'authorName', array(
         'get_callback' => function() {
             return get_the_author();
