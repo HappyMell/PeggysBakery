@@ -6,7 +6,7 @@
   margin-bottom: 20px;
 
   &__title a {
-    color: #173f58;
+    color: #666666;
   }
 
   &__date {
@@ -17,8 +17,8 @@
     position: absolute;
     padding: 14px 0 11px 0;
     color: #FFF;
-    border-radius: 50%;
-    background-color: $mainBlue;
+    border-radius: 19%;
+    background-color: #f4d35e;
     width: 80px;
     line-height: 1;
     transition: opacity .33s;
@@ -30,7 +30,7 @@
   }
 
   &__date--beige {
-    background-color: $mainYellow;
+    background-color: #ffaec3;
   }
 
   &__month {

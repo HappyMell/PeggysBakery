@@ -5,6 +5,7 @@
 
   &--large {
     font-size: 3.6rem;
+    color:  #FFAEC3;
     @mixin atSmall {
       font-size: 6.25rem;
     }
@@ -12,11 +13,13 @@
 
   &--large-medium {
     font-size: 5rem;
+    color:  #FFAEC3;
     margin: 0 0 1rem 0;
   }
 
   &--medium {
     font-size: 1.9rem;
+    color:  #FFAEC3;
     margin-bottom: .75rem;
     @mixin atSmall {
       font-size: 3.125rem;
@@ -25,6 +28,7 @@
 
   &--small-plus {
     font-family: 'Lobster', cursive;
+    color:  #ffaec3;
     font-size: 1.6875rem;
     font-weight: 400;
     margin-bottom: 1.9rem;
@@ -33,6 +37,7 @@
   &--small {
     font-size: 1.2rem;
     margin-bottom: 1.9rem;
+    color:  #FFAEC3;
     @mixin atSmall {
       font-size: 1.6875rem;
     }
@@ -44,6 +49,7 @@
 
   &--tiny {
     font-family: 'Lobster', cursive;
+    color:  #FFAEC3;
     font-size: 1.3875rem;
     margin-bottom: .25rem;
   }

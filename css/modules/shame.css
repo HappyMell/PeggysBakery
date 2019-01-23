@@ -37,9 +37,10 @@
   position: relative;
   z-index: 20;
   margin: 0;
-  font-size: 2.75rem;
+  font-size: 3.75rem;
   font-weight: 100;
   text-align: center;
+  font-family: 'Lobster', cursive;
 }
 
 .school-logo-text strong {
@@ -47,16 +48,16 @@
 }
 
 .school-logo-text a {
-  color: #FFF;
+  color: rgb(245, 223, 137);
   text-decoration: none;
 }
 
 .school-logo-text--alt-color a {
-  color: #666;
+  color: #f1e1a4;
 
   &:hover {
-    color: $mainBlue;
-    text-decoration: underline;
+    color: #FFF;
+    text-decoration: none;
   }
 }
 
@@ -102,7 +103,7 @@
 }
 
 .search-trigger:hover {
-  opacity: .65;
+  color: #FAF0CA;
 }
 
 .social-icons-list {

@@ -1,10 +1,12 @@
 .full-width-split {
   @mixin atMedium {
     display: flex;
+    position: sticky;
   }
 
   &__one {
     flex: 1;
+    background-color: $lightPink;
     padding: 1.6rem 16px;
     @mixin atMedium {
       padding: 40px;

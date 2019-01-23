@@ -483,7 +483,7 @@ template {
 
 body {
   color: #333;
-  font-family: 'Lobster', cursive;
+  font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
   position: relative;
   font-size: x-large;
@@ -629,9 +629,10 @@ p, li {
   position: relative;
   z-index: 20;
   margin: 0;
-  font-size: 2.75rem;
+  font-size: 3.75rem;
   font-weight: 100;
   text-align: center;
+  font-family: 'Lobster', cursive;
 }
 
 .school-logo-text strong {
@@ -639,17 +640,17 @@ p, li {
 }
 
 .school-logo-text a {
-  color: #FFF;
+  color: rgb(245, 223, 137);
   text-decoration: none;
 }
 
 .school-logo-text--alt-color a {
-  color: #666;
+  color: #f1e1a4;
 }
 
 .school-logo-text--alt-color a:hover {
-    color: #0D3B66;
-    text-decoration: underline;
+    color: #FFF;
+    text-decoration: none;
   }
 
 @-webkit-keyframes spin {
@@ -713,7 +714,7 @@ p, li {
   }
 
 .search-trigger:hover {
-  opacity: .65;
+  color: #FAF0CA;
 }
 
 .social-icons-list {
@@ -926,6 +927,7 @@ p, li {
   padding: 12px 24px;
   border: none;
   outline: none;
+  font-family: 'Lobster', cursive;
 }
 
 .btn--small {
@@ -965,11 +967,10 @@ p, li {
 
 .btn--yellow {
     background-color: #F4D35E;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .22);
   }
 
 .btn--yellow:hover {
-    background: linear-gradient(#F4D35E, rgb(240, 188, 0));
+    color: #ffaec3;
   }
 
 .btn--beige {
@@ -994,8 +995,18 @@ p, li {
     background-color: #DDD;
   }
 
+.btn--pink {
+    background-color:  #FFAEC3;
+    color: #FFF;
+  }
+
+.btn--pink:hover {
+    color: #f2e3a6;
+  }
+
 .btn--large {
     font-size: 1.3rem;
+    background-color:  #FFAEC3;
     padding: 16px 34px;
     border-radius: 7px;
   }
@@ -1020,6 +1031,8 @@ p, li {
   right: 0;
   padding: 20px 0;
   background-color:  #FFAEC3;
+  opacity: 0.7;
+  position: relative;
 }
 
 .site-header__avatar {
@@ -1066,7 +1079,6 @@ p, li {
               transform: translateY(0) scale(1);
       position: static;
       background-color: transparent;
-      float: right;
       padding-top: 0;
       padding-bottom: 0;
       top: 0
@@ -1151,7 +1163,8 @@ p, li {
 
 .site-footer {
   padding: 2rem 0 3.5rem 0;
-  background-image: linear-gradient(#FFF, #ECECEC);
+  background-color: #fbbdc7;
+  position: inherit;
 }
 
 .site-footer p {
@@ -1159,7 +1172,7 @@ p, li {
   }
 
 .site-footer .headline {
-    color: #666;
+    color: #FFF;
     margin-bottom: .33rem;
   }
 
@@ -1185,7 +1198,6 @@ p, li {
 @media (min-width: 960px) {
 
 .site-footer__col-one {
-      text-align: left;
       width: 33%;
       float: left
   }
@@ -1239,6 +1251,7 @@ p, li {
 
 .main-navigation {
   padding-top: 2px;
+  font-family: 'Lobster', cursive;
 }
 
 .main-navigation ul {
@@ -1263,6 +1276,10 @@ p, li {
     margin-right: 20px
 }
   }
+
+.main-float-left {
+  float: left;
+}
 
 .main-navigation li {
   list-style: none;
@@ -1332,11 +1349,12 @@ p, li {
 .page-banner__bg-image {
     opacity: .33;
     background-size: cover;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    background-repeat: no-repeat;
   }
 
 .page-banner__intro {
@@ -1649,6 +1667,7 @@ body.admin-bar .search-overlay {
 
 .headline--large {
     font-size: 3.6rem;
+    color:  #FFAEC3;
   }
 
 @media (min-width: 530px) {
@@ -1660,11 +1679,13 @@ body.admin-bar .search-overlay {
 
 .headline--large-medium {
     font-size: 5rem;
+    color:  #FFAEC3;
     margin: 0 0 1rem 0;
   }
 
 .headline--medium {
     font-size: 1.9rem;
+    color:  #FFAEC3;
     margin-bottom: .75rem;
   }
 
@@ -1677,6 +1698,7 @@ body.admin-bar .search-overlay {
 
 .headline--small-plus {
     font-family: 'Lobster', cursive;
+    color:  #ffaec3;
     font-size: 1.6875rem;
     font-weight: 400;
     margin-bottom: 1.9rem;
@@ -1685,6 +1707,7 @@ body.admin-bar .search-overlay {
 .headline--small {
     font-size: 1.2rem;
     margin-bottom: 1.9rem;
+    color:  #FFAEC3;
   }
 
 @media (min-width: 530px) {
@@ -1700,6 +1723,7 @@ body.admin-bar .search-overlay {
 
 .headline--tiny {
     font-family: 'Lobster', cursive;
+    color:  #FFAEC3;
     font-size: 1.3875rem;
     margin-bottom: .25rem;
   }
@@ -1753,12 +1777,15 @@ body.admin-bar .search-overlay {
 @media (min-width: 960px) {
 
 .full-width-split {
-    display: flex
+    display: flex;
+    position: -webkit-sticky;
+    position: sticky
 }
   }
 
 .full-width-split__one {
     flex: 1;
+    background-color: #FFE5EC;
     padding: 1.6rem 16px;
   }
 
@@ -1805,7 +1832,7 @@ body.admin-bar .search-overlay {
 }
 
 .event-summary__title a {
-    color: #173f58;
+    color: #666666;
   }
 
 .event-summary__date {
@@ -1816,8 +1843,8 @@ body.admin-bar .search-overlay {
     position: absolute;
     padding: 14px 0 11px 0;
     color: #FFF;
-    border-radius: 50%;
-    background-color: #0D3B66;
+    border-radius: 19%;
+    background-color: #f4d35e;
     width: 80px;
     line-height: 1;
     transition: opacity .33s;
@@ -1829,7 +1856,7 @@ body.admin-bar .search-overlay {
   }
 
 .event-summary__date--beige {
-    background-color: #F4D35E;
+    background-color: #ffaec3;
   }
 
 .event-summary__month {

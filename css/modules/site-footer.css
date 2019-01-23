@@ -1,13 +1,14 @@
 .site-footer {
   padding: 2rem 0 3.5rem 0;
-  background-image: linear-gradient(#FFF, #ECECEC);
+  background-color: #fbbdc7;
+  position: inherit;
 
   p {
     font-size: .9rem;
   }
 
   .headline {
-    color: #666;
+    color: #FFF;
     margin-bottom: .33rem;
   }
 
@@ -29,7 +30,6 @@
   &__col-one {
     text-align: center;
     @mixin atMedium {
-      text-align: left;
       width: 33%;
       float: left;
     }

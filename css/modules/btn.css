@@ -9,6 +9,7 @@
   padding: 12px 24px;
   border: none;
   outline: none;
+  font-family: 'Lobster', cursive;
 
   &--small {
     font-size: .88rem;
@@ -47,11 +48,10 @@
 
   &--yellow {
     background-color: $mainYellow;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .22);
   }
 
   &--yellow:hover {
-    background: linear-gradient($mainYellow, color($mainYellow b(+40%) s(+80%)));
+    color: #ffaec3;
   }
 
   &--beige {
@@ -72,12 +72,24 @@
     color: #173f58;
   }
 
-  &--white:hover {
+   &--white:hover {
     background-color: #DDD;
   }
 
+  &--pink {
+    background-color:  #FFAEC3;
+    color: #FFF;
+  }
+
+  &--pink:hover {
+    color: #f2e3a6;
+  }
+
+ 
+
   &--large {
     font-size: 1.3rem;
+    background-color:  #FFAEC3;
     padding: 16px 34px;
     border-radius: 7px;
     @mixin atSmall {

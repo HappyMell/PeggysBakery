@@ -21,7 +21,7 @@
     <div class="hero-slider__interior container">
       <div class="hero-slider__overlay">
         <h2 class="headline headline--medium t-center">Large collection of cup cakes</h2>
-        <p class="t-center">Over 20 combinations of cup cakes, filling and frosting</p>
+        <p class="t-center">Over 20 combinations of cup cakes, filling and frosting, custom made just for you!</p>
         <p class="t-center no-margin"><a href="<?php echo site_url('/bakes'); ?>" class="btn btn--pink">Take a look</a></p>
       </div>
     </div>
@@ -30,7 +30,7 @@
     <div class="hero-slider__interior container">
       <div class="hero-slider__overlay">
         <h2 class="headline headline--medium t-center">Sweet Cakes</h2>
-        <p class="t-center">Hand made cakes, made with love</p>
+        <p class="t-center">Hand made cakes, made with love baked fresh daily. Best cakes in town!</p>
         <p class="t-center no-margin"><a href="<?php echo site_url('/bakes'); ?>" class="btn btn--pink">Take a look</a></p>
       </div>
     </div>
@@ -50,7 +50,7 @@
   <div class="full-width-split group">
     <div class="full-width-split__one" >
       <div class="full-width-split__inner" >
-        <h2 class="headline headline--small-plus-sale t-center">Upcoming Sales</h2>
+        <h2 class="headline headline--small-plus t-center">Upcoming Sales</h2>
 
       <!-- Page Event toggle, dates-->
           <?php
