@@ -14,6 +14,7 @@ Version: 1.0
 @import "base/utility-classes";
 
 /* BEM Blocks */
+@import "modules/fave-slider";
 @import "modules/shame";
 @import "modules/btn";
 @import "modules/site-header";
