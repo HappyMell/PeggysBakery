@@ -1,8 +1,10 @@
 .hero-slider {
   position: relative;
+  top: -33px;
 
   div {
     outline: none;
+
   }
 
   &__interior {

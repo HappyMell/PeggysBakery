@@ -2,9 +2,9 @@ import $ from 'jquery';
 
 class FaveSlider {
     constructor() {
-        $('.slider').slick({
+        $('.vertical-center').slick({
             centerMode: true,
-            centerPadding: '60px',
+            variableWidth: true,
             slidesToShow: 3,
             responsive: [
                 {
@@ -12,7 +12,6 @@ class FaveSlider {
                     settings: {
                         arrows: true,
                         centerMode: true,
-                        centerPadding: '40px',
                         slidesToShow: 3
                     }
                 },
@@ -21,7 +20,6 @@ class FaveSlider {
                     settings: {
                         arrows: true,
                         centerMode: true,
-                        centerPadding: '40px',
                         slidesToShow: 1
                     }
                 }

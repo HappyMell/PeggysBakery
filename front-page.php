@@ -12,39 +12,39 @@
   </div>
 
 <!-- Favorite Slider -->
-
-<section class="slider">
+<div class="fave-slide-header">
+  <h2>Best Sellers</h2>
+<section class="vertical-center slider">
     <div>
-      <img src="http://placehold.it/350x100?text=1">
+     <a href="<?php echo site_url('/bakes')?>"> <img src="/wp-content/themes/peggysbakery/images/blackforest.png"></a>
+      <p>Black Forest Cake</p>
     </div>
     <div>
-      <img src="http://placehold.it/350x100?text=2">
+      <a href="<?php echo site_url('/bakes')?>"><img src="/wp-content/themes/peggysbakery/images/chocolatechip.png"></a>
+      <p>Chocolate Chip Cookies</p>
     </div>
     <div>
-      <img src="http://placehold.it/350x100?text=3">
+     <a href="<?php echo site_url('/bakes')?>"> <img src="/wp-content/themes/peggysbakery/images/chocolatesprinkle.png"></a>
+      <p>Chocolate Sprinkle Cake</p>
     </div>
     <div>
-      <img src="http://placehold.it/350x100?text=4">
+      <a href="<?php echo site_url('/bakes')?>"><img src="/wp-content/themes/peggysbakery/images/cupcakess.png"></a>
+      <p>Cup Cakes</p>
     </div>
     <div>
-      <img src="http://placehold.it/350x100?text=5">
+      <a href="<?php echo site_url('/bakes')?>"><img src="/wp-content/themes/peggysbakery/images/custardcake.png"></a>
+      <p>Custard Cake</p>
     </div>
     <div>
-      <img src="http://placehold.it/350x100?text=6">
+     <a href="<?php echo site_url('/bakes')?>"> <img src="/wp-content/themes/peggysbakery/images/fruitcake.png"></a>
+      <p>Fruit Cake</p>
     </div>
     <div>
-      <img src="http://placehold.it/350x100?text=7">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=8">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=9">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x100?text=10">
+      <a href="<?php echo site_url('/bakes')?>"><img src="/wp-content/themes/peggysbakery/images/oreocake.png"></a>
+      <p>Oreo Cake</p>
     </div>
   </section>
+</div>
 
 
 <!-- Hero Slider -->

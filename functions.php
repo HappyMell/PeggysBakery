@@ -49,7 +49,7 @@ if(!$args['photo']) {
 
 // Imported files CSS/icons/googe maps
 function university_files() {
-
+    wp_enqueue_style('slick', 'http://kenwheeler.github.io/slick/slick/slick-theme.css');
     wp_enqueue_script('googleMap', '//maps.googleapis.com/maps/api/js?key=AIzaSyC0NwzCmf3qZ6rSC26iWzTbA5JKHZjWy1w', NULL, microtime(), true);
     wp_enqueue_script('main_university_js', get_theme_file_uri('/js/scripts-bundled.js'), NULL, microtime(), true);
 
@@ -57,6 +57,7 @@ function university_files() {
     wp_enqueue_style('custom-google-fonts-lobster', '//fonts.googleapis.com/css?family=Lobster');
     wp_enqueue_style('font_awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
     wp_enqueue_style('university_main_styles', get_stylesheet_uri(), NULL, microtime());
+
 
     wp_localize_script('main_university_js', 'bakeryData', array(
         'root_url' => get_site_url(),
@@ -159,6 +160,7 @@ function ourLoginCSS() {
    wp_enqueue_style('university_main_styles', get_stylesheet_uri());
    wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
    wp_enqueue_style('custom-google-fonts-lobster','//fonts.googleapis.com/css?family=Lobster');
+   wp_enqueue_style('slick', 'http://kenwheeler.github.io/slick/slick/slick-theme.css');
 
 }
 
