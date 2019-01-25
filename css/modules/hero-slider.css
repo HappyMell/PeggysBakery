@@ -34,6 +34,10 @@
 
 }
 
+.slick-list {
+  margin: -104px;
+}
+
 .slick-dots {
   z-index: 100;
   position: absolute;

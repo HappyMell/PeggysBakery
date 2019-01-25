@@ -2,8 +2,8 @@
 
 get_header();
 pageBanner(array(
-  'title' => 'Our Campuses',
-  'subtitle' => 'We have several campuses all around London, take a look around!'
+  'title' => 'Our Locations',
+  'subtitle' => 'We have several locations all around London, take a look around!'
 ));
  ?>
 
@@ -16,7 +16,7 @@ pageBanner(array(
 <?php
   while(have_posts()) {
     the_post();
-    $mapLocation = get_field('map_location');
+    $mapLocation = get_field('locations');
    ?>
     <div class="marker" data-lat="<?php echo $mapLocation['lat'] ?>" data-lng="<?php echo $mapLocation['lng']; ?>">
       <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>

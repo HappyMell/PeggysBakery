@@ -598,6 +598,7 @@ img {
 .slider {
         width: 97%;
         margin: 0px auto;
+        padding: 50px;
     }
 
 .slick-slide {
@@ -1195,7 +1196,7 @@ h2 {
   }
 
 .site-footer {
-  padding: 2rem 0 3.5rem 0;
+  padding: 1rem 0 3.5rem 0;
   background-color: #fbbdc7;
   position: inherit;
 }
@@ -1380,9 +1381,9 @@ h2 {
   }
 
 .page-banner__bg-image {
-    opacity: .33;
+    opacity: .83;
     background-size: cover;
-    position: fixed;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
@@ -1450,6 +1451,10 @@ h2 {
       width: 50%
   }
   }
+
+.slick-list {
+  margin: -104px;
+}
 
 .slick-dots {
   z-index: 100;
@@ -1991,7 +1996,7 @@ margin: 20px 0;
   }
 
 .link-list a {
-    color: #FFE5EC;
+    color: #ffaec3;
   }
 
 .metabox {

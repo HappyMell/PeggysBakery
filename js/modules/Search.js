@@ -70,12 +70,12 @@ class Search {
     <div class="one-third">
         <h2 class="search-overlay__section-title">General Information</h2>
         ${results.generalInfo.length ? '<ul class="link-list min-list">' : '<p>No general information matches that search.</p>'}
-        ${results.generalInfo.map(item => `<li><a href="${item.permalink}">${item.title}</a> ${item.postType == 'post' ? `by ${item.authorName}` : ''} </li>`).join('')}
+        ${results.generalInfo.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
         ${results.generalInfo.length ? '</ul>' : ''}  
     </div>
     <div class="one-third">
         <h2 class="search-overlay__section-title">Bakes</h2>
-            ${results.bakes.length ? '<ul class="link-list min-list">' : `<p>No programs match that search. <a href="${bakeryData.root_url}/bakes">View all sweet treats</a></p>`}
+        ${results.bakes.length ? '<ul class="link-list min-list">' : `<p>No programs match that search. <a href="${bakeryData.root_url}/bakes">View all sweet treats</a></p>`}
         ${results.bakes.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
         ${results.bakes.length ? '</ul>' : ''}  
         
@@ -83,23 +83,25 @@ class Search {
 
     <div class="one-third">
         <h2 class="search-overlay__section-title">Locations</h2>
-            ${results.locations.length ? '<ul class="link-list min-list">' : `<p>No locations match that search. <a href="${bakeryData.root_url}/locations">View all locations</a></p></p>`}
+         ${results.locations.length ? '<ul class="link-list min-list">' : `<p>No locations match that search. <a href="${bakeryData.root_url}/locations">View all locations</a></p></p>`}
         ${results.locations.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
         ${results.locations.length ? '</ul>' : ''}  
 
         <h2 class="search-overlay__section-title">Sales</h2>
-            ${results.sales.length ? '' : `<p>No sales match that search. <a href="${bakeryData.root_url}/sales">View all sales</a></p></p>`}
+        ${results.sales.length ? '' : `<p>No sales match that search. <a href="${bakeryData.root_url}/sales">View all sales</a></p></p>`}
         ${results.sales.map(item => `
         <div class="event-summary">
         <a class="event-summary__date t-center" href="${item.permalink}">
             <span class="event-summary__month">
             ${item.month}
             </span>
-            <span class="event-summary__day">${item.day}</span>  
+            <span class="event-summary__day">
+            ${item.day}
+            </span>  
         </a>
         <div class="event-summary__content">
             <h5 class="event-summary__title headline headline--tiny"><a href="${item.permalink}">${item.title}</a></h5>
-            <p>${item.description} <a href="${item.permalink}" class="nu gray">Learn more</a></p>
+            <p>${item.description} <a href="${item.permalink}" class="nu gray">See more</a></p>
         </div>
         </div>
         `).join('')}

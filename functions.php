@@ -91,7 +91,7 @@ function university_adjust_queries($query) {
    //     $query->set('post_per_page', -1);
    // }
 
-    if(!is_admin()  AND is_post_type_archive('sale') AND $query->is_main_query()) {
+    if(!is_admin()  AND is_post_type_archive('sales') AND $query->is_main_query()) {
 
         $today = date('Ymd');
 

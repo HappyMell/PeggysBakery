@@ -14,7 +14,7 @@ pageBanner(array(
   
   while(have_posts()) {
     the_post(); 
-    get_template_part('template-parts/content-sale');
+    get_template_part('template-parts/content-sales');
    }
 
     echo paginate_links();
@@ -22,7 +22,6 @@ pageBanner(array(
   ?>
 <hr class="section-break">
 
-<p><a href="<?php echo site_url('/past-sales') ?>">Past Sales</a></p>
 
 </div>
 <?php get_footer();

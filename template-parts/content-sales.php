@@ -2,11 +2,11 @@
           <a class="event-summary__date t-center" href="#">
             <span class="event-summary__month">
             <?php 
-                $eventDate = DateTime :: createFromFormat('d/m/Y', get_field('sales'));
-                  echo $eventDate->format('M'); 
+                $saleDate = DateTime :: createFromFormat('d/m/Y', get_field('sales'));
+                  echo $saleDate->format('M'); 
              ?>
              </span>
-            <span class="event-summary__day"><?php echo $eventDate->format('d') ?></span>  
+            <span class="event-summary__day"><?php echo $saleDate->format('d') ?></span>  
           </a>
           <div class="event-summary__content">
             <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>

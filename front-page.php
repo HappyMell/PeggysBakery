@@ -108,7 +108,7 @@
 
         while($homePageSales->have_posts()) {
               $homePageSales->the_post(); 
-              get_template_part('template-parts/content', 'sale'); 
+              get_template_part('template-parts/content', 'sales'); 
 
 
 
