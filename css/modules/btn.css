@@ -10,6 +10,8 @@
   border: none;
   outline: none;
   font-family: 'Lobster', cursive;
+ text-shadow: 1px 1px #806e73;
+
 
   &--small {
     font-size: .88rem;
@@ -79,10 +81,13 @@
   &--pink {
     background-color:  #FFAEC3;
     color: #FFF;
+
   }
 
   &--pink:hover {
     color: #f2e3a6;
+   text-shadow: 1px 1px #806e73;
+
   }
 
  
@@ -92,6 +97,7 @@
     background-color:  #FFAEC3;
     padding: 16px 34px;
     border-radius: 7px;
+
     @mixin atSmall {
       font-size: 1.9rem;
     }

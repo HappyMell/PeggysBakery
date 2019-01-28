@@ -15,8 +15,10 @@
     font-family: 'Lobster', cursive;
     font-weight: 300;
     font-size: 3.6rem;
+    text-align: center;
     margin: 0 0 1rem 0;
-    color: #FFF;
+    color: #f8e9ac;
+    text-shadow: 2px 2px #e599ae;
     @mixin atSmall {
       font-size: 5rem;
     }

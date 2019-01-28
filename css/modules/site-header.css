@@ -7,6 +7,8 @@
   background-color:  #FFAEC3;
   opacity: 0.7;
   position: relative;
+  box-shadow: 5px 10px 18px #888888;
+
 
   &__avatar {
     top: 0;

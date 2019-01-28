@@ -2,6 +2,8 @@
   margin: 0;
   font-family:  'Lobster', cursive;
   font-weight: 300;
+  text-shadow: 1px 1px #806e73;
+
 
   &--large {
     font-size: 3.6rem;

@@ -1,6 +1,7 @@
 .hero-slider {
   position: relative;
-  top: -33px;
+  top: -70px;
+  bottom: -30px;
 
   div {
     outline: none;
@@ -9,7 +10,7 @@
 
   &__interior {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: -60px;
 
     @mixin atMedium {
       padding-top: 130px;

@@ -85,7 +85,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -356,7 +357,11 @@ template {
 
     display: block;
     box-sizing: border-box;
-    user-select: none;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 
     -webkit-touch-callout: none;
     -khtml-user-select: none;
@@ -389,7 +394,8 @@ template {
 .slick-slider .slick-track,
 .slick-slider .slick-list
 {
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
 }
 
 .slick-track
@@ -588,6 +594,8 @@ p, li {
   color: #ffaec3;
   top: -30px;
   height: 450px;
+  box-shadow: 3px -9px 18px #888888;
+
 }
 
 img {
@@ -628,7 +636,8 @@ img {
     }
 
 .slick-center img {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 p {
@@ -639,20 +648,8 @@ p {
 
 h2 {
   height: 36px;
-}
+  text-shadow: 1px 1px #a89a9e;
 
-.remove-favorite {
-  display: inline-block;
-  transition: all .3s;
-  color: #999;
-  font-size: .9rem;
-  cursor: pointer;
-  padding: 4px 6px;
-  border-radius: 3px;
-}
-
-.remove-favorite:hover {
-  background-color: #DEDEDE;
 }
 
 .page-section {
@@ -688,15 +685,19 @@ h2 {
   font-weight: 100;
   text-align: center;
   font-family: 'Lobster', cursive;
-}
+  text-shadow: 2px 2px #e599ae;
+
+ }
 
 .school-logo-text strong {
   font-weight: 400;
+
 }
 
 .school-logo-text a {
   color: rgb(245, 223, 137);
   text-decoration: none;
+
 }
 
 .school-logo-text--alt-color a {
@@ -708,12 +709,25 @@ h2 {
     text-decoration: none;
   }
 
-@keyframes spin {
+@-webkit-keyframes spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -724,7 +738,8 @@ h2 {
   height: 24px;
   border: 0.25rem solid rgba(0, 0, 0, 0.2);
   border-top-color: black;
-  animation: spin 1s infinite linear;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
 }
 
 .c-pink {color: #FFE5EC}
@@ -739,6 +754,7 @@ h2 {
 
 .search-trigger {
   display: none;
+  text-shadow: 2px 2px #e599ae;
   color: #FFF;
   position: relative;
   cursor: pointer;
@@ -756,6 +772,8 @@ h2 {
 
 .search-trigger:hover {
   color: #FAF0CA;
+  text-shadow: 2px 2px #e599ae;
+
 }
 
 .social-icons-list {
@@ -805,8 +823,8 @@ h2 {
 }
 
 .nav-list a:hover {
-  color: #0D3B66;
-  text-decoration: underline;
+  text-shadow: 1px 1px #806e73;
+
 }
 
 .one-half,
@@ -893,19 +911,6 @@ h2 {
   margin-left: 10px;
 }
 
-.note-limit-message {
-  visibility: hidden;
-  opacity: 0;
-  transition: all .3s ease-out;
-  color: #c32929;
-  font-weight: bold;
-}
-
-.note-limit-message.active {
-  visibility: visible;
-  opacity: 1;
-}
-
 /* Like Box */
 
 .generic-content .like-box {
@@ -921,40 +926,6 @@ h2 {
   position: relative;
 }
 
-.generic-content .like-box:hover {
-  background-color: #DEDEDE;
-}
-
-.like-count {
-  padding-left: 10px;
-}
-
-.like-box .fa-heart-o {
-  transition: all .35s ease-out;
-  position: absolute;
-  left: 10px;
-}
-
-.like-box .fa-heart {
-  left: 10px;
-  transition: all .4s ease-out;
-  position: absolute;
-  visibility: hidden;
-  transform: scale(.2);
-  opacity: 0;
-}
-
-.like-box[data-exists="yes"] .fa-heart {
-  transform: scale(1);
-  visibility: visible;
-  opacity: 1;
-}
-
-.like-box[data-exists="yes"] .fa-heart-o {
-  visibility: hidden;
-  opacity: 0;
-}
-
 .btn {
   display: inline-block;
   cursor: pointer;
@@ -967,6 +938,7 @@ h2 {
   border: none;
   outline: none;
   font-family: 'Lobster', cursive;
+ text-shadow: 1px 1px #806e73;
 }
 
 .btn--small {
@@ -1037,10 +1009,13 @@ h2 {
 .btn--pink {
     background-color:  #FFAEC3;
     color: #FFF;
+
   }
 
 .btn--pink:hover {
     color: #f2e3a6;
+   text-shadow: 1px 1px #806e73;
+
   }
 
 .btn--large {
@@ -1072,6 +1047,7 @@ h2 {
   background-color:  #FFAEC3;
   opacity: 0.7;
   position: relative;
+  box-shadow: 5px 10px 18px #888888;
 }
 
 .site-header__avatar {
@@ -1094,14 +1070,18 @@ h2 {
     top: -20px;
     padding-top: 58px;
     opacity: 0;
-    transform: translateY(-20%);
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    transition: opacity .3s ease-out, visibility .3s ease-out, -webkit-transform .3s ease-out;
     transition: opacity .3s ease-out, visibility .3s ease-out, transform .3s ease-out;
+    transition: opacity .3s ease-out, visibility .3s ease-out, transform .3s ease-out, -webkit-transform .3s ease-out;
     padding-bottom: 20px;
   }
 
 .site-header__menu--active {
       opacity: 1;
-      transform: translateY(0);
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
       visibility: visible;
     }
 
@@ -1110,7 +1090,8 @@ h2 {
 .site-header__menu {
       visibility: visible;
       opacity: 1;
-      transform: translateY(0) scale(1);
+      -webkit-transform: translateY(0) scale(1);
+              transform: translateY(0) scale(1);
       position: static;
       background-color: transparent;
       padding-top: 0;
@@ -1216,8 +1197,8 @@ h2 {
   }
 
 .site-footer__link:hover {
-    color: #0D3B66;
-    text-decoration: underline;
+  text-shadow: 1px 1px #806e73;
+
   }
 
 .site-footer__inner {
@@ -1239,7 +1220,7 @@ h2 {
 
 .site-footer__col-two-three-group {
     text-align: center;
-    width: 85%;
+    width: 17%;
     margin: 0 auto;
   }
 
@@ -1248,7 +1229,7 @@ h2 {
 .site-footer__col-two-three-group {
       text-align: left;
       float: left;
-      width: 42%;
+      width: 16%;
       margin: 0
   }
   }
@@ -1279,7 +1260,7 @@ h2 {
       clear: none;
       text-align: left;
       width: 25%;
-      float: right
+      float: left
   }
   }
 
@@ -1311,10 +1292,6 @@ h2 {
 }
   }
 
-.main-float-left {
-  float: left;
-}
-
 .main-navigation li {
   list-style: none;
 }
@@ -1329,6 +1306,8 @@ h2 {
 
 .main-navigation a {
   display: inline-block;
+    text-shadow: 2px 2px #e599ae;
+
   color: #FFF;
   text-decoration: none;
   font-weight: 300;
@@ -1345,6 +1324,9 @@ h2 {
 .main-navigation .current-menu-item a,
 .main-navigation a:hover {
   color: #FAF0CA;
+    text-shadow: 2px 2px #e599ae;
+
+ 
 }
 
 .page-banner {
@@ -1369,8 +1351,10 @@ h2 {
     font-family: 'Lobster', cursive;
     font-weight: 300;
     font-size: 3.6rem;
+    text-align: center;
     margin: 0 0 1rem 0;
-    color: #FFF;
+    color: #f8e9ac;
+    text-shadow: 2px 2px #e599ae;
   }
 
 @media (min-width: 530px) {
@@ -1411,7 +1395,8 @@ h2 {
 
 .hero-slider {
   position: relative;
-  top: -33px;
+  top: -70px;
+  bottom: -30px;
 
 }
 
@@ -1422,7 +1407,7 @@ h2 {
 
 .hero-slider__interior {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: -60px;
   }
 
 @media (min-width: 960px) {
@@ -1513,8 +1498,11 @@ h2 {
   background-color: rgba(255, 255, 255, .96);
   visibility: hidden;
   opacity: 0;
-  transform: scale(1.09);
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
+  transition: opacity .3s, visibility .3s, -webkit-transform .3s;
   transition: opacity .3s, transform .3s, visibility .3s;
+  transition: opacity .3s, transform .3s, visibility .3s, -webkit-transform .3s;
   box-sizing: border-box;
 }
 
@@ -1555,7 +1543,8 @@ body.admin-bar .search-overlay {
 .search-overlay--active {
     visibility: visible;
     opacity: 1;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 
 .search-overlay__section-title {
@@ -1640,63 +1629,11 @@ body.admin-bar .search-overlay {
   overflow: hidden;
 }
 
-.professor-cards {
-  margin: 0;
-  padding: 0;
-}
-
-.search-overlay .professor-cards {
-    padding-top: 21px;
-  }
-
-.professor-card {
-  position: relative;
-  display: inline-block;
-  width: 200px;
-  margin-right: 15px;
-  background-color: #FFB2C7;
-  overflow: hidden;
-}
-
-.search-overlay .professor-card {
-    width: 180px;
-  }
-
-.professor-card__image {
-    display: block;
-    transition: opacity .3s ease-out, transform .3s ease-out;
-  }
-
-.professor-card:hover .professor-card__image {
-    opacity: .80;
-    transform: scale(1.1) rotate(4deg);
-  }
-
-.professor-card__name {
-    font-weight: 300;
-    font-size: .9rem;
-    position: absolute;
-    bottom: 0;
-    color: #FFF;
-    left: 0;
-    right: 0;
-    padding: 3px 10px;
-    background-color: rgba(227, 165, 182, 0.85);
-  }
-
-.professor-card:hover .professor-card__name {
-    background-color: rgba(206, 166, 177, 0.85);
-  }
-
-.professor-card__list-item {
-    display: inline-block;
-    list-style: none;
-  }
-
 .headline {
   margin: 0;
   font-family:  'Lobster', cursive;
   font-weight: 300;
+  text-shadow: 1px 1px #806e73;
 
 }
 
@@ -1813,7 +1750,9 @@ body.admin-bar .search-overlay {
 
 .full-width-split {
     display: flex;
-    position: sticky
+    position: -webkit-sticky;
+    position: sticky;
+    margin-top: -140px
 }
   }
 
@@ -1997,60 +1936,6 @@ margin: 20px 0;
 
 .link-list a {
     color: #ffaec3;
-  }
-
-.metabox {
-  background-color: #FAF0CA;
-  border-radius: 3px;
-  padding: 10px 15px;
-  display: inline-block;
-  margin-bottom: 30px;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, .07);
-
-}
-
-.metabox--position-up {
-    position: absolute;
-    top: 0;
-    transform: translateY(-50%);
-  }
-
-.metabox--with-home-link {
-    padding: 0;
-  }
-
-.metabox__main {
-    padding: 10px 15px 10px 11px;
-  }
-
-.metabox p {
-    margin: 0;
-    font-size: .9rem;
-    color: rgb(168, 146, 56);
-  }
-
-.metabox a {
-    color: rgb(168, 146, 56);
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-.metabox a:hover {
-    text-decoration: underline;
-  }
-
-.metabox .metabox__blog-home-link {
-    background-color: #0D3B66;
-    color: #FFF;
-    display: inline-block;
-    padding: 10px 15px;
-    border-radius: 3px 0 0 3px;
-    font-weight: normal;
-  }
-
-.metabox .metabox__blog-home-link:hover {
-    text-decoration: none;
-    background-color: rgb(11, 47, 81);
   }
 
 .post-item {

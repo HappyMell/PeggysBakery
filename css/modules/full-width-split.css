@@ -2,6 +2,7 @@
   @mixin atMedium {
     display: flex;
     position: sticky;
+    margin-top: -140px;
   }
 
   &__one {

@@ -21,16 +21,13 @@
         <!-- Custom Menu -->
           <ul>
             <li><a href="<?php echo site_url('/about-us')?>">About Us</a></li>
-            <li><a href="/bakes">Bakes</a></li>
-            <li><a href="/sale">Sales</a></li>
-            <li><a href="/locations">Locations</a></li>
+            <li><a href="<?php echo site_url('/bakes')?>">Bakes</a></li>
+            <li><a href="<?php echo site_url('/sales')?>">Sales</a></li>
+            <li><a href="<?php echo site_url('/locations')?>">Locations</a></li>
           </ul> 
         </nav>
       </div>
-
-      <div class="site-footer__col-three">
-        
-      </div>
+      
     </div>
 
     <div class="site-footer__col-four">

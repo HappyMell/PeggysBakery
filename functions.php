@@ -29,7 +29,7 @@ if(!$args['photo']) {
         $args['photo'] = get_field('page_banner_background_image')['sizes']['pageBanner'];
 
    } else {
-       $args['photo'] = get_theme_file_uri('/images/ocean.jpg');
+       $args['photo'] = get_theme_file_uri('/images/bakeryaboutus.jpg');
    }
 }
 ?>
@@ -68,29 +68,18 @@ function university_files() {
 add_action('wp_enqueue_scripts', 'university_files');
 
 // Custom photo sizes
-function university_features() {
+function bakery_features() {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
-    add_image_size('professorLandscape', 400, 260, true);
-    add_image_size('professorPortrait', 480, 650, true);
+    add_image_size('peggysLandscape', 400, 260, true);
+    add_image_size('peggysPortrait', 480, 650, true);
     add_image_size('pageBanner', 1500, 350, true);
 }
-add_action('after_setup_theme', 'university_features');
+add_action('after_setup_theme', 'bakery_features');
 
 
 // Custom Event dates
 function university_adjust_queries($query) {
-   // if(!is_admin() AND is_post_type_archive('campus') AND $query->is_main_query()) {
-    //    $query->set('post_per_page', -1);
-    //}
-
-
-    //if(!is_admin() AND is_post_type_archive('program') AND $query->is_main_query()) {
-    //    $query->set('orderby', 'title');
-    //    $query->set('order', 'ASC');
-   //     $query->set('post_per_page', -1);
-   // }
-
     if(!is_admin()  AND is_post_type_archive('sales') AND $query->is_main_query()) {
 
         $today = date('Ymd');

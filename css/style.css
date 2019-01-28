@@ -23,7 +23,6 @@ Version: 1.0
 @import "modules/page-banner";
 @import "modules/hero-slider";
 @import "modules/search-overlay";
-@import "modules/professor-card";
 @import "modules/headline";
 @import "modules/generic-content";
 @import "modules/full-width-split";
@@ -31,5 +30,5 @@ Version: 1.0
 @import "modules/page-links";
 @import "modules/acf-map";
 @import "modules/link-list";
-@import "modules/metabox";
 @import "modules/post-item";
+@import "modules/metabox";

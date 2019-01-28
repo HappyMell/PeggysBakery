@@ -18,8 +18,8 @@
   }
 
   &__link:hover {
-    color: $mainBlue;
-    text-decoration: underline;
+  text-shadow: 1px 1px #806e73;
+
   }
 
   &__inner {
@@ -37,12 +37,12 @@
 
   &__col-two-three-group {
     text-align: center;
-    width: 85%;
+    width: 17%;
     margin: 0 auto;
     @mixin atMedium {
       text-align: left;
       float: left;
-      width: 42%;
+      width: 16%;
       margin: 0;
     }
   }
@@ -67,7 +67,7 @@
       clear: none;
       text-align: left;
       width: 25%;
-      float: right;
+      float: left;
     }
   }
 }
