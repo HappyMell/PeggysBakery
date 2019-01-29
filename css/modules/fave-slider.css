@@ -57,8 +57,10 @@ img {
 
 
 p {
-  color:  #CC8B9C;
+  color: #f8e9ac;
   height: -40px;
+    text-shadow: 1px 1px #e599ae;
+
 
 }
 

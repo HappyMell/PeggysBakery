@@ -8,7 +8,7 @@ while(have_posts()) {
     ?>
     
 
-  <div class="container container--narrow page-section">
+  <div class="container page-section">
 
    <div class="one-third">
                 <?php the_post_thumbnail('peggysPortrait');?>

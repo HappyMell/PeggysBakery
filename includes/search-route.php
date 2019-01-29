@@ -3,7 +3,7 @@
 add_action('rest_api_init', 'bakeryRegisterSearch');
 
 function bakeryRegisterSearch() {
-  register_rest_route('bakery/v2', 'search', array(
+  register_rest_route('bakeries/v2', 'search', array(
     'methods' => WP_REST_SERVER::READABLE,
     'callback' => 'bakerySearchResults'
   ));
@@ -11,7 +11,7 @@ function bakeryRegisterSearch() {
 
 function bakerySearchResults($data) {
   $mainQuery = new WP_Query(array(
-    'post_type' => array('post', 'page', 'bakes', 'locations', 'sales', 'news'),
+    'post_type' => array('post', 'page', 'bakes', 'locations', 'sales'),
     's' => sanitize_text_field($data['term'])
   ));
 
@@ -19,96 +19,55 @@ function bakerySearchResults($data) {
     'generalInfo' => array(),
     'bakes' => array(),
     'locations' => array(),
-    'sales' => array(),
-    'news' => array()
-  );
+    'sales' => array()
+    );
 
   while($mainQuery->have_posts()) {
     $mainQuery->the_post();
 
-    if (get_post_type() == 'post' || get_post_type() == 'page') {
+    if (get_post_type() == 'post' OR get_post_type() == 'page') {
       array_push($results['generalInfo'], array(
         'title' => get_the_title(),
         'permalink' => get_the_permalink(),
-        'postType' => get_post_type(),
+        'postType' => get_post_type()
       ));
     }
 
-    if (get_post_type() == 'bakes') {
+     if (get_post_type() == 'bakes') {
       array_push($results['bakes'], array(
         'title' => get_the_title(),
-        'permalink' => get_the_permalink()
-      ));
-    }    
-
-    if (get_post_type() == 'locations') {
-      array_push($results['locations'], array(
-        'title' => get_the_title(),
-        'permalink' => get_the_permalink()
-      ));
+        'permalink' => get_the_permalink(),
+        'content' => the_content()
+            ));
     }
 
-    if (get_post_type() == 'news') {
-      array_push($results['news'], array(
-        'title' => get_the_title(),
-        'permalink' => get_the_permalink()
-      ));
-    }
+      if (get_post_type() == 'locations') {
+            array_push($results['locations'], array(
+              'title' => get_the_title(),
+              'permalink' => get_the_permalink()
+            ));
+          }
 
-    if (get_post_type() == 'sales') {
-      $saletDate = new DateTime(get_field('sales'));
+       if (get_post_type() == 'sales') {
+      $saleDate = DateTime :: createFromFormat('d/m/Y', get_field('sales'));
       $description = null;
-      if (has_excerpt()) {
-        $description = get_the_excerpt();
-      } else {
-        $description = wp_trim_words(get_the_content(), 18);
-      }
+      if(has_excerpt()) {
+          $description = get_the_excerpt();
+              } else {
+                $description =  wp_trim_words(get_the_content(), 18);
+              } 
 
       array_push($results['sales'], array(
         'title' => get_the_title(),
         'permalink' => get_the_permalink(),
-        'month' => $saletDate->format('M'),
+        'month' => $saleDate->format('M'),
         'day' => $saleDate->format('d'),
         'description' => $description
       ));
-    }
+    }  
     
+    
+
   }
-
-
-    $programRelationshipQuery = new WP_Query(array(
-      'post_type' => array('sale'),
-      'meta_query' => $programsMetaQuery
-    ));
-
-    while($programRelationshipQuery->have_posts()) {
-      $programRelationshipQuery->the_post();
-
-      if (get_post_type() == 'sales') {
-        $eventDate =  DateTime :: createFromFormat('d/m/Y', get_field('sales'));
-        $description = null;
-        if (has_excerpt()) {
-          $description = get_the_excerpt();
-        } else {
-          $description = wp_trim_words(get_the_content(), 18);
-        }
-
-        array_push($results['sales'], array(
-          'title' => get_the_title(),
-          'permalink' => get_the_permalink(),
-          'month' => $eventDate->format('M'),
-          'day' => $eventDate->format('d'),
-          'description' => $description
-        ));
-      }
-
-    }
-
-    $results['locations'] = array_values(array_unique($results['locations'], SORT_REGULAR));
-    $results['sales'] = array_values(array_unique($results['sales'], SORT_REGULAR));
-  
-
-
-  return $results;
-
+return $results;
 }

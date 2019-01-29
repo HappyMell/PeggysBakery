@@ -2,9 +2,12 @@
 .page-section {
   padding-top: 1.6rem;
   padding-bottom: 1.6rem;
+  background-color: #fbbdc7;
   @mixin atSmall {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
+    padding-left: 31.5rem;
+    padding-right: 31.5rem;
   }
 
   &--white {

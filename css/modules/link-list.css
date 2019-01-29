@@ -3,9 +3,11 @@
     padding: 1rem 0;
     font-size: 1.5rem;
     border-bottom: 1px dotted #DEDEDE;
+    color: #f8e9ac;
 
     .search-overlay & {
-      font-size: 1.3rem;
+      font-size: 2.3rem;
+      text-align: center;
     }
   }
 
@@ -14,6 +16,14 @@
   }
 
   a {
-    color: #ffaec3;
+    color: #f1e1a4;
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    text-shadow: 1px 1px #806e73
+  }
+
+  a:hover {
+    color: white;
+    text-shadow: 2px 2px #806e73;
   }
 }

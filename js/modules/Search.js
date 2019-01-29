@@ -64,7 +64,7 @@ class Search {
     }
 
     getResults() {
-        $.getJSON(bakeryData.root_url + '/wp-json/bakery/v2/search?term=' + this.searchField.val(), (results) => {
+        $.getJSON(bakeryData.root_url + '/wp-json/bakeries/v2/search?term=' + this.searchField.val(), (results) => {
             this.resultsDiv.html(`
 <div class="row">
     <div class="one-third">
@@ -75,11 +75,11 @@ class Search {
     </div>
     <div class="one-third">
         <h2 class="search-overlay__section-title">Bakes</h2>
-        ${results.bakes.length ? '<ul class="link-list min-list">' : `<p>No programs match that search. <a href="${bakeryData.root_url}/bakes">View all sweet treats</a></p>`}
+        ${results.bakes.length ? '<ul class="link-list min-list">' : `<p>No bakes match that search. <a href="${bakeryData.root_url}/bakes">View all sweet treats</a></p>`}
         ${results.bakes.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
         ${results.bakes.length ? '</ul>' : ''}  
-        
-    </div>
+        </div>
+     
 
     <div class="one-third">
         <h2 class="search-overlay__section-title">Locations</h2>
