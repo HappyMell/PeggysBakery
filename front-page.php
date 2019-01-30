@@ -12,35 +12,37 @@
   </div>
 
 <!-- Favorite Slider -->
+
+
 <div class="fave-slide-header">
   <h2>Best Sellers</h2>
 <section class="vertical-center slider">
     <div>
-     <a href="<?php echo site_url('/bakes')?>"> <img src="/wp-content/themes/peggysbakery/images/blackforest.png"></a>
+     <a href="<?php echo site_url('/bakes')?>"> <img src="<?php echo THEME_IMG_PATH;?>/blackforest.png"> </a>
       <p>Black Forest Cake</p>
     </div>
     <div>
-      <a href="<?php echo site_url('/bakes')?>"><img src="/wp-content/themes/peggysbakery/images/chocolatechip.png"></a>
+      <a href="<?php echo site_url('/bakes')?>"><img src="<?php echo THEME_IMG_PATH;?>/chocolatechip.png"></a>
       <p>Chocolate Chip Cookies</p>
     </div>
     <div>
-     <a href="<?php echo site_url('/bakes')?>"> <img src="/wp-content/themes/peggysbakery/images/chocolatesprinkle.png"></a>
+     <a href="<?php echo site_url('/bakes')?>"> <img src="<?php echo THEME_IMG_PATH;?>/chocolatesprinkle.png"></a>
       <p>Chocolate Sprinkle Cake</p>
     </div>
     <div>
-      <a href="<?php echo site_url('/bakes')?>"><img src="/wp-content/themes/peggysbakery/images/cupcakess.png"></a>
+      <a href="<?php echo site_url('/bakes')?>"><img src="<?php echo THEME_IMG_PATH;?>/cupcakess.png"></a>
       <p>Cup Cakes</p>
     </div>
     <div>
-      <a href="<?php echo site_url('/bakes')?>"><img src="/wp-content/themes/peggysbakery/images/custardcake.png"></a>
+      <a href="<?php echo site_url('/bakes')?>"><img src="<?php echo THEME_IMG_PATH;?>/custardcake.png"></a>
       <p>Custard Cake</p>
     </div>
     <div>
-     <a href="<?php echo site_url('/bakes')?>"> <img src="/wp-content/themes/peggysbakery/images/fruitcake.png"></a>
+     <a href="<?php echo site_url('/bakes')?>"> <img src="<?php echo THEME_IMG_PATH;?>/fruitcake.png"></a>
       <p>Fruit Cake</p>
     </div>
     <div>
-      <a href="<?php echo site_url('/bakes')?>"><img src="/wp-content/themes/peggysbakery/images/oreocake.png"></a>
+      <a href="<?php echo site_url('/bakes')?>"><img src="<?php echo THEME_IMG_PATH;?>/oreocake.png"></a>
       <p>Oreo Cake</p>
     </div>
   </section>
@@ -92,7 +94,7 @@
 
         $homePageSales = new WP_Query(array(
           'posts_per_page' => 2,
-          'post_type' => 'sale',
+          'post_type' => 'sales',
           'meta_query' => array(
             array(
               'key' => 'sales',
