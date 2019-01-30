@@ -9,7 +9,7 @@ pageBanner(array(
 
 
 
-<div class="container container--narrow page-section">
+<div class="container page-section">
   <?php 
   
   while(have_posts()) {

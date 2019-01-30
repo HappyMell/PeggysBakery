@@ -6,8 +6,7 @@
   @mixin atSmall {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
-    padding-left: 31.5rem;
-    padding-right: 31.5rem;
+    padding: 0 294px;
   }
 
   &--white {

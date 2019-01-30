@@ -47,5 +47,6 @@
 
   &__intro p {
     margin: 0;
+    text-align: center;
   }
 }

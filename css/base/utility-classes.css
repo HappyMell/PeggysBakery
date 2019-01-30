@@ -9,6 +9,14 @@
   max-width: 960px;
 }
 
+.box {
+ background-color: white;
+ box-shadow: 1px 1px 1px grey;
+ margin: 8px;
+   border-radius: 5px;
+
+}
+
 .section-break {
   border: none;
   border-top: 1px solid #DDD;

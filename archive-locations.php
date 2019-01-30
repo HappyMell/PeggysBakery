@@ -7,7 +7,7 @@ pageBanner(array(
 ));
  ?>
 
-<div class="container container--narrow page-section">
+<div class="container page-section">
 
 
 
@@ -25,18 +25,24 @@ pageBanner(array(
   <?php } ?>
 </div>
 
-<div class="container container--narrow page-section">
-    <ul class="link-list min-list">
+<div class="container page-section">
+    <ul class="box-list">
   <?php 
   
   while(have_posts()) {
     the_post(); ?>
-    <li><a href="<?php the_permalink(); ?>"><?php the_title();?></a></li>
+    
+   <div class=box> 
+    <li>
+        <a href="<?php the_permalink(); ?>"><?php the_title();?>
+  </a></li>
+  </div>
   <?php }
 
     echo paginate_links();
 
   ?>
+ 
   </ul>
 
 </div>
