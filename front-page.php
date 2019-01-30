@@ -96,7 +96,7 @@
           'posts_per_page' => 2,
           'post_type' => 'sales',
           'meta_query' => array(
-            array(
+            array( 
               'key' => 'sales',
               'compare' => '>=',
               'value' => $today,
